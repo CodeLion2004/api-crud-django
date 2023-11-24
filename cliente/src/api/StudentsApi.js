@@ -9,8 +9,3 @@ export const getAllStudents = () => {
     return studenAPI.get('/')
     
 }
-
-export const CreateStudent = (estudiante) =>{
-    return studenAPI.post('/', estudiante)
-
-}
