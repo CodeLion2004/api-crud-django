@@ -12,15 +12,13 @@ function ModDelet(props) {
 
   const handleDelete = async () => {
     try {
-      // Realizar una solicitud DELETE a la API Django
       const response = await axios.delete(
         `http://localhost:8000/django/api/v1/estudiante/${props.student.id}/`
       );
 
       console.log(response.data);
-      handleClose(); // Cerrar el modal de eliminación
+      handleClose();
 
-      // Actualizar la lista de estudiantes en el estado del componente después de la eliminación
       props.setEstudiantes(
         props.estudiantes.filter((student) => student.id !== props.student.id)
       );

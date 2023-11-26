@@ -64,7 +64,7 @@ function ModInsert(props) {
   };
 
   const bodyModal = (
-    <div className={modalStyle}>
+    <div>
       <div
         style={{
           display: "flex",

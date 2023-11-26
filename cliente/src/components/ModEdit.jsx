@@ -45,21 +45,21 @@ function ModEdit(props) {
     setOpen(false);
   };
 
+  const modalStyle = {
+    position: "absolute",
+    width: 400,
+    backgroundColor: "white",
+    border: "1px solid #000",
+    borderRadius: 10,
+    boxShadow: 24,
+    padding: 15,
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
   const bodyModalEdit = (
-    <div
-      style={{
-        position: "absolute",
-        width: 400,
-        backgroundColor: "white",
-        border: "1px solid #000",
-        borderRadius: 10,
-        boxShadow: 24,
-        padding: 15,
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
+    <div>
       <div
         style={{
           display: "flex",
@@ -162,7 +162,7 @@ function ModEdit(props) {
         aria-labelledby="edit-modal-title"
         aria-describedby="edit-modal-description"
       >
-        <div>{bodyModalEdit}</div>
+        <div style={modalStyle}>{bodyModalEdit}</div>
       </Modal>
     </div>
   );
